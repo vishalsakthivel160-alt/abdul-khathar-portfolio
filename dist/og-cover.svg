@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0E5C4F"/>
+  <rect width="1200" height="630" fill="url(#g)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="g" cx="80%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#B8863B" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0E5C4F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <text x="80" y="300" font-family="Georgia, serif" font-size="58" fill="#F7F7F4">[CLIENT NAME]</text>
+  <text x="80" y="360" font-family="Arial, sans-serif" font-size="30" fill="#F7F7F4" opacity="0.85">Freelance Web Developer &amp; Digital Marketing Professional</text>
+</svg>
