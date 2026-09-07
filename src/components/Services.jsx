@@ -17,7 +17,7 @@ export default function Services() {
   return (
     <section className="section section--tinted" id="services">
       <div className="container">
-        <div className="section-head">
+        <div className="section-head reveal">
           <h2>Services Offered</h2>
           <p className="section-head__lede">
             Practical web development and digital marketing support, built around what actually helps a business grow.
@@ -25,8 +25,8 @@ export default function Services() {
         </div>
 
         <div className="services__grid">
-          {services.map((service) => (
-            <article key={service.id} className="service-card">
+          {services.map((service, index) => (
+            <article key={service.id} className={`service-card reveal-up delay-${(index % 3) + 1}`}>
               <div className="service-card__icon">
                 {iconMap[service.icon] || <Code2 size={26} />}
               </div>

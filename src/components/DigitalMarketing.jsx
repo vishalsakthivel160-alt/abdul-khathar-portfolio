@@ -15,13 +15,13 @@ export default function DigitalMarketing() {
   return (
     <section className="section" id="digital-marketing">
       <div className="container">
-        <div className="section-head">
+        <div className="section-head reveal">
           <h2>{digitalMarketing.heading}</h2>
           <p className="section-head__lede">{digitalMarketing.subheading}</p>
         </div>
 
         {/* Instagram Profile Card Callout */}
-        <div className="instagram-card">
+        <div className="instagram-card reveal-up delay-1">
           <div className="instagram-card__info">
             <div className="instagram-card__avatar">
               <Instagram size={28} />
@@ -48,7 +48,7 @@ export default function DigitalMarketing() {
         {/* Topics & Services Grid */}
         <div className="digital-marketing-grid">
           {digitalMarketing.cards.map((card, idx) => (
-            <div key={idx} className="digital-marketing-card">
+            <div key={idx} className={`digital-marketing-card reveal-up delay-${idx + 1}`}>
               <div className="digital-marketing-card__icon">
                 {iconMap[card.icon] || <Megaphone size={22} />}
               </div>

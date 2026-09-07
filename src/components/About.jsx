@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section className="section" id="about">
       <div className="container about">
-        <div className="section-head">
+        <div className="section-head reveal">
           <h2>About Me</h2>
           <p className="section-head__lede">
             A developer and marketer dedicated to building high-performing sites that deliver real business growth.
@@ -15,7 +15,7 @@ export default function About() {
         </div>
 
         <div className="about__grid">
-          <div className="about__text">
+          <div className="about__text reveal-up delay-1">
             {aboutBio.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
@@ -23,7 +23,7 @@ export default function About() {
 
           <div className="about__facts">
             {aboutStats.map((stat, index) => (
-              <div key={index} className="fact-card">
+              <div key={index} className={`fact-card reveal-scale delay-${index + 1}`}>
                 <span className="fact-card__value">{stat.value}</span>
                 <span className="fact-card__label">{stat.label}</span>
               </div>

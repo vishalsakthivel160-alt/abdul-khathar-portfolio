@@ -13,9 +13,11 @@ import Experience from './components/Experience';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { useScrollReveal } from './hooks/useScrollReveal';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
+  useScrollReveal();
 
   return (
     <div className="app-container">

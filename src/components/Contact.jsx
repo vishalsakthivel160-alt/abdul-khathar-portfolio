@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Linkedin, Github, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const socialIconMap = {
-  Linkedin: <Linkedin size={18} />,
-  Github: <Github size={18} />,
   Instagram: <Instagram size={18} />,
 };
 
@@ -96,7 +94,7 @@ export default function Contact() {
   return (
     <section className="section section--tinted contact" id="contact">
       <div className="container contact__grid">
-        <div className="contact__info">
+        <div className="contact__info reveal">
           <h2>Let's Work Together</h2>
           <p className="contact__lede">
             Have a project in mind, or need a website that generates leads and drives real growth? Send a message and I'll get back to you directly.
@@ -133,7 +131,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit} novalidate>
+        <form className="contact-form reveal-up delay-1" onSubmit={handleSubmit} novalidate>
           <div className="form-row">
             <label htmlFor="name">Your Name</label>
             <input

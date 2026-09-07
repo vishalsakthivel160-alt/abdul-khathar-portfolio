@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ExternalLink, Github } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -56,16 +56,6 @@ export default function ProjectModal({ project, onClose }) {
                 className="btn btn--primary btn--small"
               >
                 Visit Live Website <ExternalLink size={16} />
-              </a>
-            )}
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn--outline btn--small"
-              >
-                View on GitHub <Github size={16} />
               </a>
             )}
           </div>

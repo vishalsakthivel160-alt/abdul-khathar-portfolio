@@ -8,7 +8,7 @@ export default function Freelancing() {
   return (
     <section className="section section--tinted" id="freelancing">
       <div className="container">
-        <div className="freelancing-banner">
+        <div className="freelancing-banner reveal-scale">
           <div className="freelancing-banner__content">
             <h2>{freelancing.heading}</h2>
             <p>{freelancing.subheading}</p>

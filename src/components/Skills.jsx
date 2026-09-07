@@ -16,7 +16,7 @@ export default function Skills() {
   return (
     <section className="section" id="skills">
       <div className="container">
-        <div className="section-head">
+        <div className="section-head reveal">
           <h2>Technical &amp; Marketing Skills</h2>
           <p className="section-head__lede">
             Proficiencies spanning web development technologies, analytical tools, and digital marketing.
@@ -25,7 +25,7 @@ export default function Skills() {
 
         <div className="skills__grid">
           {categories.map((cat, idx) => (
-            <div key={idx} className="skill-group">
+            <div key={idx} className={`skill-group reveal-up delay-${(idx % 3) + 1}`}>
               <h3>{cat.title}</h3>
               <div className="skill-pills">
                 {cat.items.map((skill, sIdx) => (

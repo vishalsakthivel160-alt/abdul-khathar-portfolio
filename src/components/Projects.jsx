@@ -8,7 +8,7 @@ export default function Projects({ onSelectProject }) {
   return (
     <section className="section" id="projects">
       <div className="container">
-        <div className="section-head">
+        <div className="section-head reveal">
           <h2>Featured &amp; Client Projects</h2>
           <p className="section-head__lede">
             Real client work and full-stack builds demonstrating web development, SEO, and AI integration.
@@ -16,7 +16,7 @@ export default function Projects({ onSelectProject }) {
         </div>
 
         {/* Featured Project */}
-        <div className="featured-card">
+        <div className="featured-card reveal-up delay-1">
           <span className="featured-card__tag">{featuredProject.tag}</span>
 
           <div className="featured-card__grid">
@@ -67,8 +67,8 @@ export default function Projects({ onSelectProject }) {
 
         {/* Secondary Projects Grid */}
         <div className="projects__grid">
-          {projects.map((proj) => (
-            <article key={proj.id} className="project-card">
+          {projects.map((proj, index) => (
+            <article key={proj.id} className={`project-card reveal-up delay-${index + 1}`}>
               <div className="project-card__thumb">
                 <img src={proj.image} alt={proj.title} />
               </div>

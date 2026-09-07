@@ -8,9 +8,9 @@ export const portfolioData = {
     name: "Abdul Khathar S",
     badgeInitials: "AK",
     title: "Freelance Web Developer & Digital Marketing Professional",
-    statusBadge: "Available for Internships & Freelance Work",
+    statusBadge: "Open for Freelance Work",
     headline: "Building high-performing websites and digital experiences that help businesses grow.",
-    longDescription: "Freelance Web Developer and Digital Marketing Professional specializing in responsive websites, SEO, lead generation, digital marketing, and social media promotion — actively working in web development and digital marketing since 2024.",
+    longDescription: "I build responsive, high-performing websites and help businesses grow online through SEO, lead generation, and social media marketing. Since 2024, I've worked with clients to turn their digital presence into measurable results — more traffic, more leads, more conversions.",
     email: "abdulkhathar.dev@gmail.com",
     phone: "+91 98765 43210",
     location: "Chennai, India",
@@ -18,8 +18,6 @@ export const portfolioData = {
   },
 
   socialLinks: [
-    { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
-    { name: "GitHub", url: "https://github.com", icon: "Github" },
     { name: "Instagram", url: "https://www.instagram.com/ak_digital?stkn=MTlqejdvZHg5aWpzeg==", icon: "Instagram" },
   ],
 
@@ -37,7 +35,7 @@ export const portfolioData = {
   aboutStats: [
     { value: "2024", label: "Working in web development & digital marketing since" },
     { value: "4 Months", label: "Internship in website development & digital marketing" },
-    { value: "8.9 CGPA", label: "Master of Computer Applications, SRM University" },
+    { value: "9.00 CGPA", label: "Master of Computer Applications, SRM University" },
   ],
 
   aboutBio: [
@@ -178,7 +176,7 @@ export const portfolioData = {
       degree: "Master of Computer Applications (MCA)",
       institution: "SRM University, Vadapalani Campus",
       duration: "2022 — 2024",
-      grade: "CGPA: 8.9",
+      grade: "CGPA: 9.00",
     },
     {
       id: 2,
@@ -238,7 +236,6 @@ export const portfolioData = {
     toolsAndPlatforms: [
       "VS Code",
       "Git",
-      "GitHub",
       "Vercel",
       "Anaconda",
       "OpenAI API",

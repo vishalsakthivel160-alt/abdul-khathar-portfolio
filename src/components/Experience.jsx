@@ -7,7 +7,7 @@ export default function Experience() {
   return (
     <section className="section section--tinted" id="experience">
       <div className="container">
-        <div className="section-head">
+        <div className="section-head reveal">
           <h2>Experience</h2>
           <p className="section-head__lede">
             Working timeline in freelance client project delivery and internship work.
@@ -15,8 +15,8 @@ export default function Experience() {
         </div>
 
         <ol className="timeline">
-          {experience.map((item) => (
-            <li key={item.id} className="timeline__item">
+          {experience.map((item, index) => (
+            <li key={item.id} className={`timeline__item reveal-up delay-${index + 1}`}>
               <div className="timeline__marker" aria-hidden="true"></div>
               <div className="timeline__card">
                 <span className="timeline__date">{item.duration}</span>

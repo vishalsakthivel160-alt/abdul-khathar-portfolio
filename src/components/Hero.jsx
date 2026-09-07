@@ -9,7 +9,7 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="hero__bg" aria-hidden="true"></div>
       <div className="container hero__inner">
-        <div className="hero__content">
+        <div className="hero__content reveal">
           <p className="hero__status">
             <span className="hero__status-dot" aria-hidden="true"></span>
             {personal.statusBadge}
@@ -46,12 +46,12 @@ export default function Hero() {
             </div>
             <div className="hero__meta-item">
               <dt>Background</dt>
-              <dd>Internship + Freelance Work</dd>
+              <dd>Open for Freelance Work</dd>
             </div>
           </dl>
         </div>
 
-        <div className="hero__visual">
+        <div className="hero__visual reveal-scale delay-2">
           <div className="hero__portrait-card">
             <div className="hero__portrait-frame">
               <img src={personal.profileImage} alt={`${personal.name} Profile`} />
