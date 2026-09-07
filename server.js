@@ -24,7 +24,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL;
+const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL || "abdulkhathar585@gmail.com";
 const CONTACT_FROM = process.env.CONTACT_FROM;
 const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || "*";
 

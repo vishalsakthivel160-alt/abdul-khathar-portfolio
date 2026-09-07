@@ -11,7 +11,7 @@ export const portfolioData = {
     statusBadge: "Open for Freelance Work",
     headline: "Building high-performing websites and digital experiences that help businesses grow.",
     longDescription: "I build responsive, high-performing websites and help businesses grow online through SEO, lead generation, and social media marketing. Since 2024, I've worked with clients to turn their digital presence into measurable results — more traffic, more leads, more conversions.",
-    email: "abdulkhathar.dev@gmail.com",
+    email: "abdulkhathar585@gmail.com",
     phone: "+91 98765 43210",
     location: "Chennai, India",
     profileImage: profileImg,

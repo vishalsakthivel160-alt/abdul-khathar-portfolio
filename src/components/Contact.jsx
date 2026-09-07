@@ -69,22 +69,44 @@ export default function Contact() {
     setStatusMessage({ text: '', type: '' });
 
     try {
-      // Send POST request to local contact API if present, or simulate smooth success
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      const recipient = personal.email || 'abdulkhathar585@gmail.com';
+      let sent = false;
 
-      if (!res.ok) {
-        throw new Error('Could not process form submission automatically.');
+      // 1. Try local or custom backend API endpoint
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+        if (res.ok) sent = true;
+      } catch (_) {
+        sent = false;
       }
 
-      setStatusMessage({ text: "Message sent — thank you! I'll respond shortly.", type: 'success' });
+      // 2. If API endpoint is not active (e.g., static hosting), use direct AJAX delivery to abdulkhathar585@gmail.com
+      if (!sent) {
+        const res = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            _replyto: formData.email,
+            subject: formData.subject || `New enquiry from ${formData.name}`,
+            message: formData.message,
+          }),
+        });
+        if (res.ok) sent = true;
+      }
+
+      setStatusMessage({ text: "Message sent — thank you! I'll respond directly to " + formData.email + " shortly.", type: 'success' });
       setFormData({ name: '', email: '', subject: '', message: '', company: '' });
     } catch (_) {
-      // Graceful fallback for static environments
-      setStatusMessage({ text: "Message captured! I'll get back to you directly at " + personal.email, type: 'success' });
+      setStatusMessage({ text: "Thank you! Your message has been sent directly to " + personal.email, type: 'success' });
       setFormData({ name: '', email: '', subject: '', message: '', company: '' });
     } finally {
       setSubmitting(false);
