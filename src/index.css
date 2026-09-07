@@ -302,8 +302,22 @@ p { margin: 0; }
     overflow-y: auto;
   }
   .nav__menu.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
-  .nav__link { padding: 14px 4px; border-bottom: 1px solid var(--border); }
-  .nav__link--cta { margin-top: 14px; text-align: center; }
+  .nav__link {
+    display: block;
+    width: 100%;
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav__link--cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: none;
+  }
 }
 
 /* =========================================================================
