@@ -2,6 +2,7 @@ import profileImg from '../assets/profile.jpg';
 import shineSparkImg from '../assets/shine_spark.jpg';
 import codeChallengeImg from '../assets/code_challenge.jpg';
 import productAnalysisImg from '../assets/product_analysis.jpg';
+import ibmCertImg from '../assets/ibm_certificate.jpg';
 
 export const portfolioData = {
   personal: {
@@ -246,6 +247,12 @@ export const portfolioData = {
   },
 
   certifications: [
+    {
+      title: "Data Science and AI Certificate",
+      issuer: "IBM Skills Network / Learnvista",
+      date: "May 19, 2024",
+      image: ibmCertImg,
+    },
     { title: "Digital Marketing Foundations", issuer: "Professional Certification" },
     { title: "Python for Data Science", issuer: "IBM" },
     { title: "Data Analytics with Power BI", issuer: "Learnbay" },
